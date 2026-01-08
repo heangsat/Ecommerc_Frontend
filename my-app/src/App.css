@@ -1,0 +1,163 @@
+/* Global Styles */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-light);
+}
+
+/* Navbar Customization */
+.navbar-custom {
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+}
+.search-input:focus {
+  background-color: #fff;
+  border-color: #dee2e6;
+  box-shadow: none;
+}
+
+.search-btn {
+  border-radius: 0 50px 50px 0;
+  border-left: none;
+  background-color: #f1f3f5;
+  border-color: #f1f3f5;
+}
+.search-btn:hover {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+}
+
+/* Product Card Styling */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 280px; /* Fixed height for consistency */
+  background-color: #f8f9fa; /* Light gray background for transparent images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills the area. Use 'contain' if you strictly need to see the whole item */
+  /* padding: 10px; Removed padding for bigger look */
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.badge-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc3545;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card:hover .wishlist-btn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wishlist-btn:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.card-title-custom {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-desc-custom {
+  font-size: 0.875rem;
+  color: #6c757d;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.6rem; /* fixed height for alignment */
+  margin-bottom: 1rem;
+}
+
+.price-tag {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.add-btn {
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: 600;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #0b5ed7;
+}
