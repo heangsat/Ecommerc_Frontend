@@ -63,8 +63,8 @@ function CreateProductForm({ show, handleClose, onProductCreated, productToEdit 
 
     try {
       const url = productToEdit 
-        ? `http://localhost:4000/api/product/${productToEdit._id}` 
-        : 'http://localhost:4000/api/product';
+        ? `https://backend-iody.onrender.com/api/product/${productToEdit._id}` 
+        : 'https://backend-iody.onrender.com/api/product';
       
       const method = productToEdit ? 'PUT' : 'POST';
 

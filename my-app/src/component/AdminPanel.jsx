@@ -20,7 +20,7 @@ const AdminPanel = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:4000/api/product');
+      const response = await fetch('https://backend-iody.onrender.com/api/product');
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -48,7 +48,7 @@ const AdminPanel = () => {
   const handleDeleteClick = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
         try {
-            const response = await fetch(`http://localhost:4000/api/product/${id}`, {
+            const response = await fetch(`https://backend-iody.onrender.com/api/product/${id}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
